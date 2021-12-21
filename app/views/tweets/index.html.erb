@@ -1,10 +1,58 @@
-<div class="contents row">
-  <% @tweets.each do |tweet| %>
-    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
-      <p><%= tweet.text %></p>
-      <span class="name">
-        <%= tweet.name %>
-      </span>
+<%= render 'shared/header' %>
+
+<div class='main'>
+  <div class="contents-row">
+    <%= image_tag 'camera3.jpeg', class: 'top-img' %>
+    <h2 class='title'>pick up category</h2>
+    <div class="subtitle" >
+      new products
     </div>
-  <% end %>
+    <ul class='item-list'>
+      <%if @tweets.present? %>
+        <% @tweets.each do |tweet| %>
+          <li class='list'>
+            <%= link_to(tweet_path(tweet.id)) do %>
+              <div class='item-img-content'>
+                <%= image_tag tweet.image, class: 'item-img' %>
+                
+                <div class='item-info'>
+                  <h3>
+                    Text:<%= tweet.text %>
+                  </h3>
+                  <h3>
+                    Camera's brand:<%= tweet.brand.name %>
+                  </h3>
+                  <h3>
+                    Camera's model:<%= tweet.camera.name %>
+                  </h3>
+                  <h3>
+                    Sensor size:<%= tweet.sensor.name %>
+                  </h3>
+                  <h3>
+                    Resolution:<%= tweet.resolution.name %>
+                  </h3>
+                  <h3>
+                    price:<%= tweet.price %>yen
+                  </h3>
+                </div>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+      <% else %>
+        <li class='list'>
+          <%= link_to '#' do %>
+          <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
+          <div class='item-info'>
+            <h3 class='item-name'>
+              Post it!!
+            </h3>
+          </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
+
+<%= render 'shared/footer' %>

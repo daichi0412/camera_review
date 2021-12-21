@@ -1,0 +1,129 @@
+.registration-main {
+  width: 100%;
+  min-width: 100%;
+  height: 255%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+.form-wrap {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  padding-bottom: 70px;
+}
+
+.form-header {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.form-header-text {
+  line-height: 100px;
+  border-bottom: 1px solid #f5f5f5;
+  font-weight: bold;
+}
+
+.form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.form-group:first-child {
+  padding: 0;
+}
+
+.form-text-wrap {
+  width: 100%;
+  height: 20%;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.form-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.input-default {
+  width: 100%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.input-default:hover {
+  background-color: #999966;
+}
+
+
+
+.info-text {
+  color: #888;
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+.form-info-header {
+  font-weight: bold;
+}
+
+.form-info-text {
+  font-size: 15px;
+}
+
+.input-name-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-name {
+  width: 130px;
+  margin: 5px 20px 0 20px;
+  height: 48px;
+  line-height: 30px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  resize: none;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+form input[type="submit"] {
+  background-color: #808000;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #556B2A;
+}

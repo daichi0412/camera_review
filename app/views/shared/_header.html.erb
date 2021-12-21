@@ -1,0 +1,16 @@
+<header class='top-page-header'>
+  <div class='nav'>
+    <ul class='lists'>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, user_session_path, class: "user-nickname" %></li>
+        <li><%= link_to 'log out', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to 'log in', new_user_session_path, class: "login" %></li>
+        <li><%= link_to 'sign up', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+    <div class="user_nav grid-6">
+      <a class="post" href="/tweets/new">POST</a>
+    </div>
+    </ul>
+  </div>
+</header>
