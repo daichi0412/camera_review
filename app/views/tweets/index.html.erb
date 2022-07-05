@@ -3,36 +3,38 @@
 <div class='main'>
   <div class="contents-row">
     <%= image_tag 'camera3.jpeg', class: 'top-img' %>
-    <h2 class='title'>pick up category</h2>
+    <h2 class='title'>Pick Up Category</h2>
     <div class="subtitle" >
-      new products
+      New Photos
     </div>
     <ul class='item-list'>
       <%if @tweets.present? %>
         <% @tweets.each do |tweet| %>
           <li class='list'>
+            <div class='user_name'>
+              <%= link_to(tweet.user.nickname, "/users/#{tweet.user.id}") %>
+            </div>
             <%= link_to(tweet_path(tweet.id)) do %>
               <div class='item-img-content'>
                 <%= image_tag tweet.image, class: 'item-img' %>
-                
                 <div class='item-info'>
                   <h3>
-                    Text:<%= tweet.text %>
+                    Camera's brand: <%= tweet.brand.name %>
                   </h3>
                   <h3>
-                    Camera's brand:<%= tweet.brand.name %>
+                    Camera's model: <%= tweet.camera.name %>
                   </h3>
                   <h3>
-                    Camera's model:<%= tweet.camera.name %>
+                    Sensor size: <%= tweet.sensor.name %>
                   </h3>
                   <h3>
-                    Sensor size:<%= tweet.sensor.name %>
+                    Resolution: <%= tweet.resolution.name %>
                   </h3>
                   <h3>
-                    Resolution:<%= tweet.resolution.name %>
+                    price: <%= tweet.price %>yen
                   </h3>
                   <h3>
-                    price:<%= tweet.price %>yen
+                    Text: <%= tweet.text %>
                   </h3>
                 </div>
               </div>
