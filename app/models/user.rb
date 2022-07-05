@@ -10,5 +10,6 @@ class User < ApplicationRecord
     validates :name
     validates :nickname
     validates :password
+    validates :image
   end
 end
