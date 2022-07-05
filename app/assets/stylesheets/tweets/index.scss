@@ -7,7 +7,7 @@ a {
 }
 
 .top-img {
-  width: 200%;
+  width: 80%;
   height: 100vh;
 }
 
@@ -124,21 +124,27 @@ a {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-.list {
-  display: inline-block;
-}
-
 .item-lists {
-  width: 100vw;
+  width: 80vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 10px;
+}
+
+.list {
+  display: inline-block;
+  width: 25vw;
+}
+
+.user_name {
+  font-weight: bold;
+  padding: 3vh;
+  border: 1px solid #D8D8D8;
+  background-color: #FFF;
 }
 
 .item-lists>.list {
-  width: 37vh;
-  padding: 10vw;
+  width: 35%;
   background-color: #FFF;
 }
 
@@ -156,6 +162,8 @@ a {
   background-color: #FFF;
   color: black;
   padding: 1vw;
+  font-size: 10px;
+  margin-bottom: 2vh;
 }
 
 .item-name {
