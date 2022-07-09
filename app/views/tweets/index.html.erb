@@ -1,12 +1,31 @@
-<%= render 'shared/header' %>
-
 <div class='main'>
   <div class="contents-row">
-    <%= image_tag 'camera3.jpeg', class: 'top-img' %>
+    <%= image_tag 'New-York-bridge-dawn-USA_3840x2160.jpeg', class: 'top-img' %>
+    <h1 class="grid-6"><a href="/">CameraReview</a></h1>
+    <form class="search-form" action="#">
+      <input class='input-box' placeholder='Enter the keyword'>
+      <button class="search-button">
+        <%= image_tag "search.png", class:"search-icon" %>
+      </button>
+    </form>
+    <ul class='lists'>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, user_session_path, class: "user-nickname" %></li>
+        <li><%= link_to 'log out', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to 'log in', new_user_session_path, class: "login" %></li>
+        <li><%= link_to 'sign up', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+    <div class="user_nav">
+      <a class="post" href="/tweets/new">POST</a>
+    </div>
+    </ul>
     <h2 class='title'>Pick Up Category</h2>
     <div class="subtitle" >
       New Photos
     </div>
+  </div>
+  <div>
     <ul class='item-list'>
       <%if @tweets.present? %>
         <% @tweets.each do |tweet| %>
