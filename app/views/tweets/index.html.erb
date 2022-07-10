@@ -10,16 +10,14 @@
         <li><%= link_to 'log in', new_user_session_path, class: "login" %></li>
         <li><%= link_to 'sign up', new_user_registration_path, class: "sign-up" %></li>
       <% end %>
-    <div class="user_nav">
-      <a class="post" href="/tweets/new">POST</a>
-    </div>
     </ul>
-    <h2 class='title'>Pick Up Category</h2>
-    <div class="subtitle" >
-      New Photos
-    </div>
+    <h2 class='title'>ENJOY YOUR LIFE.</h2>
+    <h2 class='title-2'>REVIEW THE CAMERA.</h2>
+    <a class="subtitle" href="/tweets/new">
+      NEW PHOTOS.
+    </a>
   </div>
-    <ul class='item-list'>
+      <ul class='item-list'>
       <%if @tweets.present? %>
         <% @tweets.each do |tweet| %>
           <li class='list'>

@@ -65,15 +65,6 @@ div.contents.row div.content_post p {
   font-family: 'ほのか明朝', serif;
 }
 
-
-
-
-.title {
-  font-weight: bold;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-  font-size: 30px;
-}
-
 .comments {
   padding: 5px;
   margin-top: 15px;
