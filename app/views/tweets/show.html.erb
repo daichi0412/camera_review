@@ -8,7 +8,7 @@
           </div>
           <%= link_to(tweet_path(tweet.id)) do %>
             <div class='item-img-content'>
-              <%= image_tag tweet.user.image, class: 'item-img' %>
+              <%= image_tag tweet.image, class: 'item-img' %>
               <div class='item-info'>
                 <h3>
                   Camera's brand: <%= tweet.brand.name %>
