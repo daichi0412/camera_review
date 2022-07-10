@@ -1,3 +1,4 @@
+<%= form_with model: @tweet, url: tweet_path, local: true do |f| %>
 <div>
   <ul class='item-list'>
     <%if @tweets.present? %>
@@ -47,3 +48,4 @@
     <% end %>
   </ul>
 </div>
+<% end %>
