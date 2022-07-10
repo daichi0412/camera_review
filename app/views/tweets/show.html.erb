@@ -8,7 +8,7 @@
           </div>
           <%= link_to(tweet_path(tweet.id)) do %>
             <div class='item-img-content'>
-              <%= image_tag tweet.image, class: 'item-img' %>
+              <%= image_tag tweet.user.image, class: 'item-img' %>
               <div class='item-info'>
                 <h3>
                   Camera's brand: <%= tweet.brand.name %>
@@ -46,63 +46,4 @@
       </li>
     <% end %>
   </ul>
-</div>
-
-<div class="tweet-show">
-  <div class="tweet-box">
-    <div class="item-img-content">
-      <%= image_tag @tweet.image ,class:"item-box-img" %>
-    </div>
-    <div class="item-price-box">
-      <span class="item-price">
-        <%= @tweet.price %>円
-      </span>
-    </div>
-  <% if user_signed_in? && @tweet.purchase.nil? %>
-    <% if current_user.id == @tweet.user_id %>
-      <%= link_to 'edit', edit_tweet_path(@tweet.id), method: :get, class: "tweet-red-btn" %>
-      <p class="or-text">or</p>
-      <%= link_to 'delete', "/tweets/#{@tweet.id}", method: :delete, class:"tweet-destroy" %>
-    <% else %>
-      <%= link_to "purchase", tweet_purchases_path(@tweet.id), class:"item-red-btn"%>
-    <% end %>
-  <% end %>
-
-    <div class="tweet-explain-box">
-      <span><%= @tweet.text %></span>
-    </div>
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-item">nickname: </th>
-          <td class="detail-value"><%= @tweet.user.nickname %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">camera's brand: </th>
-          <td class="detail-value"><%= @tweet.brand.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">camera: </th>
-          <td class="detail-value"><%= @tweet.camera.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">sensor-size: </th>
-          <td class="detail-value"><%= @tweet.sensor.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">camera's resolution: </th>
-          <td class="detail-value"><%= @tweet.resolution.name %></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <button type="submit" class="comment-btn">
-        <span>comment<span>
-      </button>
-    </form>
-  </div>
 </div>
