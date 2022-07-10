@@ -1,17 +1,15 @@
-<%= render "shared/second-header" %>
-
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
-      Enter Member Information 
+      ENTER YOUR INFORMATION
     </h1>
   </div>
   <%= render 'shared/error_messages', model: f.object %>
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">Name</label>
+      <label class="form-text">NAME</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.text_area :name, class:"input-default", id:"name", placeholder:"ex) camerataro", maxlength:"40" %>
@@ -19,32 +17,32 @@
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">Nickname</label>
+      <label class="form-text">NICKNAME</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) camera", maxlength:"40" %>
-  </div>
-  
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">Email</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"ex) camera", maxlength:"40" %>
   </div>
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">Password</label>
+      <label class="form-text">EMAIL</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.password_field :password, class:"input-default", id:"encrypted_password", placeholder:"6文字以上の半角英数字" %>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC or Phone", autofocus: true %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">PASSWORD</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"encrypted_password", placeholder:"more than 6 letters and numbers" %>
     <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
   </div>
-  
+
   <div class="form-group">
     <div class="form-text-wrap">
-      <label class="form-text">Password</label>
+      <label class="form-text">PASSWORD</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.password_field :password_confirmation, class:"input-default", id:"encrypted_password", placeholder:"6文字以上の半角英数字" %>
@@ -52,15 +50,13 @@
 
   <div class="click-user-icon">
     <p>
-      Click and upload!!
+      CLICK AND UPLOADS!!
     </p>
     <%= f.file_field :image, id:"user-image" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "SIGN UP" %>
   </div>
 </div>
 <% end %>
-
-<%= render "shared/second-footer" %>

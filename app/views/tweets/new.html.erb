@@ -1,47 +1,47 @@
-<div class="contents row">
+<div class="content-row">
   <div class="container">
     <%= form_with model: @tweet, local: true do |f| %>
-      
+
       <div class="img-upload">
         <div class="weight-bold-text">
-          Photo
+          PHOTO
         <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
         <p>
-          Click and upload!!
+          CLICK AND UPLOADS!!
         </p>
         <%= f.file_field :image, id:"tweet-image" %>
       </div>
     </div>
       <div class='weight-bold-text'>
-        Text
+        TEXT
         <span class='indispensable'>必須</span>
       </div>
       <%= f.text_field :text, id:'tweet-text'%>
       <div class="weight-bold-text">
-        Brand
+        BRAND
         <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:brand_id, Brand.all, :id, :name, {}, {class:"select-box", id:"tweet-brand"}) %>
       <div class="weight-bold-text">
-        Camera
+        CAMERA
         <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:camera_id, Camera.all, :id, :name, {}, {class:"select-box", id:"tweet-camera"}) %>
       <div class="weight-bold-text">
-        Sensor
+        SENSOR
         <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:sensor_id, Sensor.all, :id, :name, {}, {class:"select-box", id:"tweet-sensor"}) %>
       <div class="weight-bold-text">
-        Resolution
+        RESOLUTION
         <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:resolution_id, Resolution.all, :id, :name, {}, {class:"select-box", id:"tweet-resolution"}) %>
       <div class="sell-price">
       <div class="weight-bold-text">
-        Selling price
+        SELLING PRICE
         <span class="indispensable">必須</span>
       </div>
       <div>
@@ -55,8 +55,8 @@
       </div>
     </div>
     <div class="sell-btn-contents">
-      <%= f.submit "SEND" %>
-      <%=link_to 'もどる', root_path, class: "back-btn" %>
+      <%= f.submit "SEND", class: "send-btn"%>
+      <%=link_to 'BACK', root_path, class: "back-btn" %>
     </div>
     <% end %>
   </div>
