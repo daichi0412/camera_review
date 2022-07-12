@@ -1,9 +1,9 @@
 .show-user-nickname {
-  margin-top: 30px;
-  margin-left: 66vw;
+  padding-top: 36px;
+  margin-left: 68vw;
   color: black;
   font-weight: bold;
-  flex-direction: column;
+  font-size: 16px;
 }
 
 .tweet-show {

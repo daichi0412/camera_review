@@ -1,7 +1,7 @@
 <%= form_with model: @tweet, url: tweet_path, local: true do |f| %>
 
 <div>
-  <h2><%= link_to current_user.nickname, user_session_path, class: "show-user-nickname" %></h2>
+<h2><%= link_to current_user.nickname, user_session_path, class: "show-user-nickname" %></h2>
   <ul class='item-list'>
     <%if @tweets.present? %>
       <% @tweets.each do |tweet| %>
