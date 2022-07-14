@@ -1,11 +1,16 @@
 .show-user-nickname {
-  padding-top: 36px;
+  padding-top: 38px;
   margin-left: 68vw;
   color: black;
   font-weight: bold;
   font-size: 16px;
 }
 
+.item-list {
+  width: 80vw;
+  display: block;
+  flex-wrap: wrap;
+}
 .tweet-show {
   background-color: #f8f8f8;
   width: 100vw;
