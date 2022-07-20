@@ -17,7 +17,7 @@
 |camera_id|integer|null: false|
 |sensor_id|integer|null: false|
 |resolution_id|integer|null: false|
-|price|integer|null: false|
+# |price|integer|null: false| 要らない可能性あり。
 |user|references|null: false, foreign_key: true|
 ### Association
 - belongs_to: user
