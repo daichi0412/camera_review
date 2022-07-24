@@ -2,10 +2,17 @@
   <div class="container">
     <%= form_with model: @tweet, local: true do |f| %>
 
+    <div class='new-wrap'>
+      <div class='new-header'>
+        <h1 class='new-header-text'>
+          NEW PHOTO
+        </h1>
+      </div>
+
       <div class="img-upload">
         <div class="weight-bold-text">
           PHOTO
-        <span class="indispensable">必須</span>
+        <span class="indispensable">*</span>
       </div>
       <div class="click-upload">
         <p>
@@ -13,30 +20,29 @@
         </p>
         <%= f.file_field :image, id:"tweet-image" %>
       </div>
-    </div>
       <div class='weight-bold-text'>
         TEXT
-        <span class='indispensable'>必須</span>
+        <span class='indispensable'>*</span>
       </div>
-      <%= f.text_field :text, id:'tweet-text'%>
+        <textarea><%= f.text_field :text, id:'tweet-text', placeholder:"typing something in here!" %></textarea>
       <div class="weight-bold-text">
         BRAND
-        <span class="indispensable">必須</span>
+        <span class="indispensable">*</span>
       </div>
       <%= f.collection_select(:brand_id, Brand.all, :id, :name, {}, {class:"select-box", id:"tweet-brand"}) %>
       <div class="weight-bold-text">
         CAMERA
-        <span class="indispensable">必須</span>
+        <span class="indispensable">*</span>
       </div>
       <%= f.collection_select(:camera_id, Camera.all, :id, :name, {}, {class:"select-box", id:"tweet-camera"}) %>
       <div class="weight-bold-text">
         SENSOR
-        <span class="indispensable">必須</span>
+        <span class="indispensable">*</span>
       </div>
       <%= f.collection_select(:sensor_id, Sensor.all, :id, :name, {}, {class:"select-box", id:"tweet-sensor"}) %>
       <div class="weight-bold-text">
         RESOLUTION
-        <span class="indispensable">必須</span>
+        <span class="indispensable">*</span>
       </div>
       <%= f.collection_select(:resolution_id, Resolution.all, :id, :name, {}, {class:"select-box", id:"tweet-resolution"}) %>
     </div>

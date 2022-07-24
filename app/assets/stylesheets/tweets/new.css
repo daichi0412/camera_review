@@ -1,31 +1,49 @@
 .container {
   display: flex;
-  padding: 2vh 50vh 2vh 50vh;
+  padding: 4vh 50vh 4vh 50vh;
 }
 
 .content-row {
-  height: 120%;
+  height: 100px;
 }
 
 input[type="text"] {
   width: 100%;
+  height: 100px;
+}
+
+.new-header-text {
+  border-bottom: 1px solid white;
+  color: #160505;
+}
+
+.sell-btn-contents {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .send-btn {
-  margin-top: 5vh;
   color: black;
   border: 0;
   font-size: 18px;
-  margin-bottom: 20%;
   font-weight: 300;
   background: transparent;
+  margin: 5px;
 }
+
+.send-btn:hover {
+  color: #F5DEB3;
+}
+
+
 .back-btn {
-  margin-top: 30px;
+  font-size: 18px;
   color: black;
-  padding: 15px 35%;
   text-decoration: none;
   font-weight: 300;
+  margin: 5px;
 }
 
 

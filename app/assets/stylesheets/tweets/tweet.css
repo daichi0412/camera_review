@@ -28,12 +28,8 @@
 
 /* 共通 */
 .indispensable {
-  background: #990033;
-  margin-left: 8px;
-  padding: 3px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
+  color: #990033;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -155,14 +151,6 @@
 .sentence>a {
   color: #999966;
   text-decoration: none;
-}
-
-/* /注意書き */
-
-/* 下部ボタン */
-.sell-btn-contents {
-  width: 100%;
-  text-align: center;
 }
 
 .sell-btn {
