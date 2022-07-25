@@ -1,0 +1,55 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">商品の情報を入力</h2>
+    <%= form_with model: @item, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        PHOTO
+      <span class="indispensable">*</span>
+    </div>
+    <div class="click-upload">
+      <p>
+        CLICK AND UPLOADS!!
+      </p>
+      <%= f.file_field :image, id:"tweet-image" %>
+    </div>
+    <div class='weight-bold-text'>
+      TEXT
+      <span class='indispensable'>*</span>
+    </div>
+      <%= f.text_area :text, id:'tweet-text', placeholder:"typing something in here!" %>
+    <div class="weight-bold-text">
+      BRAND
+      <span class="indispensable">*</span>
+    </div>
+    <%= f.collection_select(:brand_id, Brand.all, :id, :name, {}, {class:"select-box", id:"tweet-brand"}) %>
+    <div class="weight-bold-text">
+      CAMERA
+      <span class="indispensable">*</span>
+    </div>
+    <%= f.collection_select(:camera_id, Camera.all, :id, :name, {}, {class:"select-box", id:"tweet-camera"}) %>
+    <div class="weight-bold-text">
+      SENSOR
+      <span class="indispensable">*</span>
+    </div>
+    <%= f.collection_select(:sensor_id, Sensor.all, :id, :name, {}, {class:"select-box", id:"tweet-sensor"}) %>
+    <div class="weight-bold-text">
+      RESOLUTION
+      <span class="indispensable">*</span>
+    </div>
+    <%= f.collection_select(:resolution_id, Resolution.all, :id, :name, {}, {class:"select-box", id:"tweet-resolution"}) %>
+    </div>
+
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', item_path, class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>
+</div>
